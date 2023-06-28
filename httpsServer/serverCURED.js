@@ -43,7 +43,7 @@ const server = http.createServer((request, response) => {
             cars[idFromURL] = JSON.parse(body)
             response.writeHead(200, {'Content-Type': 'application/json'});
             response.end(JSON.stringify(cars));
-        })
+        })  
     }
 })
 

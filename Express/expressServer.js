@@ -3,7 +3,7 @@ import express from "express";
 // import url from "url"
 
 const app = express();
-// app.use(bodyParser.json());
+// ap p.use(bodyParser.json());
 
 let users = [
   { id: 1, name: "Dev Anand" },
@@ -22,9 +22,10 @@ app.post("/users", (req, res) => {
   users.push(newUser);
   res.status(201).json(users);
 });
+console.log("sachin")
 
 // PUT /users/:id
-app.put("/users/:id(\\d+)", (req, res) => {  
+app.put("/users/:id", (req, res) => {  
     const id = parseInt(req.params.id);
     const updatedUser = req.body;
     users.forEach((user, index) => {

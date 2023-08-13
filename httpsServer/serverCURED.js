@@ -19,7 +19,7 @@ const server = http.createServer((request, response) => {
         request.on('data', (data) => {
             body += data
         })
-        request.on('end', () => {
+        request.on('end', () => { 
             response.writeHead(200, {'Content-Type': 'application/json'});
             cars.push(JSON.parse(body))
             response.end(JSON.stringify(cars));
